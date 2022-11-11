@@ -9,13 +9,13 @@ trigger:
 pool:
    name: az400m05l05a-pool
    demands:
-    -agent.name -equals az400m05-vm0
+    - agent.name -equals az400m05-vm0
 
 steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
+# - task: NodeTool@0
+#   inputs:
+#     versionSpec: '16.x'
+#   displayName: 'Install Node.js'
 
 - script: |
     npm install
